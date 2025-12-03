@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { fetchAuthSession, signOut } from '@aws-amplify/auth';
 import { Hub } from 'aws-amplify/utils';
+import { isAdmin } from '../../utils/auth';
 import './header.css';
 
 function Header({isWhite = false}) {
@@ -17,23 +18,29 @@ function Header({isWhite = false}) {
   const logoSrc = isWhite ? '/chris_logo_white.png' : '/chris_logo_black.png';
 
   const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [userIsAdmin, setUserIsAdmin] = useState(false);
   const navigate = useNavigate();
 
   // Check if user is logged in
   /* useEffect is used because react components should not make network calls while rendering and they should not call async functions inside the component body. fethAuthSession() is a network/async side-effect, so React requires it to be done inside useEffect. Amplify Auth session is not available synchronously, thus React cannot know if the user is logged in at the moment the component is rendered. useEffect runs only once when the header component loads, which prevents infinite loops and unnecessary checks. The isLoggedIn state allows for the component to initially render with no login status by using null as the default. As soon as the amplify auth session status is retrieved by the useEffect function, the UI is updated correctly to show whether or not the user is logged in */
   useEffect(() => {
-    async function checkAuth() {
+    async function checkAuthAndAdmin() {
       try {
         const session = await fetchAuthSession();
-        setIsLoggedIn(!!session?.tokens?.idToken);
+        const loggedIn = !!session?.tokens?.idToken;
+        setIsLoggedIn(loggedIn);
+        
+        setUserIsAdmin(loggedIn ? await isAdmin() : false);
+
       } catch {
         setIsLoggedIn(false);
+        setUserIsAdmin(false);
       }
     }
-    checkAuth();
+    checkAuthAndAdmin();
 
     const unsubscribe = Hub.listen("auth", () => {
-      checkAuth();
+      checkAuthAndAdmin();
     });
 
     return unsubscribe;
@@ -72,6 +79,7 @@ function Header({isWhite = false}) {
               </NavLink>
             <NavLink to="/projects" className={({isActive}) => isActive ? `active hover-grow ${textColor}` : `hover-grow ${textColor}`}>PROJECTS</NavLink>
             <NavLink to="/adventure" className={({isActive}) => isActive ? `active hover-grow ${textColor}` : `hover-grow ${textColor}`}>ADVENTURE</NavLink>
+            {userIsAdmin && <NavLink to="/admin" className={({isActive}) => isActive ? `active hover-grow ${textColor}` : `hover-grow ${textColor}`}>ADMIN</NavLink>}
           </Nav>
           <Nav className="ms-auto">
             <Nav.Link 
