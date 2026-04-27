@@ -1,0 +1,118 @@
+.hero-section .carousel,  
+.hero-section .carousel-item {
+  height: 100% !important;
+}
+
+.hero-section .carousel-item.active,
+.hero-section .carousel-item-next,
+.hero-section .carousel-item-prev {
+  display: flex; /* Override Bootstrap's 'block' */
+  flex-direction: column;
+}
+
+.hero-section .carousel-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 450px;
+  height: 100%
+}
+
+/* Ensure the card stretches to fill that height */
+.hero-section .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Make space at the bottom for indicators */
+.hero-section .carousel {
+  padding-bottom: 2rem; /* Adjust this to move indicators further down */
+  position: relative;
+  overflow: visible; /* CRITICAL: allows controls/indicators to "exit" the box */
+}
+
+/* 2. Position indicators below the card */
+.hero-section .carousel-indicators {
+  bottom: 0; /* Moves indicators into the padding space we created */
+  margin-bottom: 0;
+}
+
+/* 3. Style the indicator dots (optional, but makes them easier to see) */
+.hero-section .carousel-indicators [data-bs-target] {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* 4. Push controls to the left and right of the card */
+.hero-section .carousel-control-prev {
+  left: -50px; /* Negative values move them OUTSIDE the container */
+  width: 50px;
+}
+
+.hero-section .carousel-control-next {
+  right: -50px; /* Negative values move them OUTSIDE the container */
+  width: 50px;
+}
+
+/* Ensure controls remain vertically centered on the card, not the whole column */
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+  bottom: 2rem; /* Matches the padding-bottom of the carousel */
+}
+
+.animation-text {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .animation-text {
+    font-size: 1.75rem;
+  }
+
+  .hero-section img {
+    border-radius: 16px;
+  }
+
+
+  .hero-section .carousel-inner {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section .row {
+    border: 2px solid rgba(248, 249, 250, 1); /* border-light equivalent */
+    border-radius: 2rem;
+  }
+
+  .hero-section img {
+    border-radius: 0px;
+  }
+
+  .hero-section .carousel-inner {
+    min-height: 450px;
+  }
+
+    .animation-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-section .carousel-inner {
+    min-height: 300px;
+  }
+    .animation-text {
+    font-size: 1.75rem;
+  }
+}
+

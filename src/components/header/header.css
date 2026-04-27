@@ -1,0 +1,28 @@
+.hover-grow:hover {
+  transform: scale(1.1);
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.list a.active {
+  text-decoration: underline;
+}
+
+.custom-toggler-white {
+  border-color: white; /* Change the border color to white */
+}
+
+.custom-toggler-white .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.custom-toggler-black {
+  border-color: black; /* Change the border color */
+}
+
+.custom-toggler-black .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
