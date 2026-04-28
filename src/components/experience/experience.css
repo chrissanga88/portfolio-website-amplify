@@ -1,0 +1,13 @@
+.experience-section .btn {
+  min-width: 100px;
+  text-align: center;
+  background-color: #1F3D2B;
+  border-color: #1F3D2B;
+}
+
+@media (min-width: 992px) {
+  .experience-section .container{
+    border: 2px solid rgba(248, 249, 250, 1); /* border-light equivalent */
+    border-radius: 2rem;
+  }
+}
