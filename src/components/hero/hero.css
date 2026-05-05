@@ -90,7 +90,7 @@
 
 @media (min-width: 992px) {
   .hero-section .row {
-    border: 2px solid rgba(248, 249, 250, 1); /* border-light equivalent */
+    border: 2px solid white; 
     border-radius: 2rem;
   }
 

@@ -26,7 +26,7 @@ function Hero() {
     }
   ]
   return (
-    <section className="hero-section pb-5 d-flex">
+    <section className="hero-section pb-lg-5 d-flex">
       <Container className="p-0">
         <Row className="g-0 rounded-lg-5  overflow-hidden">
           <Col lg={6} xs={12} className="position-relative">
