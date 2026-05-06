@@ -11,18 +11,18 @@ function Hero() {
   const cardData = [
     { 
       id: 1, 
-      title: "Roots",
-      content: "I grew up in a small town called Brawley in Southern California and, for much of my early life, rarely had the opportunity to venture far from home. Even then, the idea of distant places—of learning new histories, cultures, and languages—felt endlessly exciting. As I got older and began traveling farther and more often, that curiosity turned into something close to an addiction."
+      title: "Trailhead",
+      content: "I began my career in the insurance industry and eventually stepped into a leadership role, where I led a team, built and managed a book of business, and learned how to operate in high-accountability environments. Over time, I became increasingly focused on how technology could improve workflows and eliminate inefficiencies—but without the technical skills to execute, those ideas stayed on paper. So I made the leap into software development."
     },
     {
       id: 2,
-      title: "The Spark",
-      content: "For years, I saved every bit of vacation time I could to explore somewhere new. Along the way, meeting people from different backgrounds reshaped how I thought about travel itself. The concept of slowing down—of spending months in one place to truly immerse yourself—was foreign to me, but it planted the seed for something bigger. The idea of an around-the-world journey slowly took shape."
+      title: "The Climb",
+      content: "Over the past few years, I’ve immersed myself in building that foundation with the goal of becoming someone who helps teams move faster and smarter while driving innovation and bringing forward-thinking ideas to life. During this period, I also traveled around the world, pushing myself physically and mentally as I gained perspective that continues to shape how I approach challenges and growth."
     },
     {
       id: 3,
-      title: "The Leap",
-      content: "After years of planning and the pause of a global pandemic, my partner and I finally left everything familiar behind and set out on an around-the-world journey spanning five continents and 38 countries. That experience gave me confidence, perspective, and a deeper appreciation for simplicity. It changed my relationship with money and material possessions, pushed me physically and mentally, and reignited a love of learning I hadn’t felt since childhood. Most importantly, it taught me the value of living an intentional, interesting life—and of always having something to look forward to."
+      title: "Next Ascent",
+      content: "I’m now looking to join a growing company that values continuous learning and initiative, where I can take ownership of complex problems and go the extra mile to build meaningful solutions."
     }
   ]
   return (

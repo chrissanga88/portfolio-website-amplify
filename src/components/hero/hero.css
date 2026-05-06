@@ -13,7 +13,7 @@
 .hero-section .carousel-inner {
   display: flex;
   align-items: stretch;
-  min-height: 450px;
+  min-height: 400px;
   height: 100%
 }
 
@@ -62,6 +62,14 @@
   bottom: 2rem; /* Matches the padding-bottom of the carousel */
 }
 
+.hero-section .card-title {
+  font-size: 1.3rem;
+}
+
+.hero-section .card-text {
+  font-size: 1rem;
+}
+
 .animation-text {
   font-size: 1.2rem;
 }
@@ -75,10 +83,17 @@
     border-radius: 16px;
   }
 
-
   .hero-section .carousel-inner {
     min-height: 350px;
   }
+
+  .hero-section .card-title {
+  font-size: 1.7rem;
+}
+
+.hero-section .card-text {
+  font-size: 1.2rem;
+}
 }
 
 @media (max-width: 768px) {
