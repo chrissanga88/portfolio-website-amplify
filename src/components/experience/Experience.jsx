@@ -131,12 +131,12 @@ function Experience() {
               </Button>
             </Nav.Item>
           </Nav>
-          <div
+          <Row
             className="row justify-content-center mx-3 gap-3 gap-md-5 mb-md-5">
               {EXPERIENCEDATA[selectedExp].map((card) => (
                 <ExperienceCard key={card.id} cardImage={card.cardImage} header={card.header} line1={card.line1} line2={card.line2} line3={card.line3}/>
               ))}
-          </div>
+          </Row>
         </Col>
       </Container>
     </section>
