@@ -1,0 +1,9 @@
+.website-section {
+  background-color: #2E5E4E;
+}
+
+@media (min-width: 1200px) {
+  .website-container {
+    max-width: 50%;
+  }
+}
