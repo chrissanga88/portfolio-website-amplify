@@ -1,0 +1,22 @@
+.semi-circle {
+  width: 50px;
+  height: 15px;
+  background-color: white;
+  border-radius: 0 0 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chevron-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.chevron-icon {
+  color: black;
+  font-size: .7rem;
+  display: block;
+}
