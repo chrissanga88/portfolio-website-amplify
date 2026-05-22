@@ -3,7 +3,7 @@ import { useState } from "react";
 import ExpandableSemiCircle from "../expandable-semi-circle/ExpandableSemiCircle";
 import "./expandable-container.css";
 
-function ExpandableContainer({ header, imageSrc, altText, children, bgColor }) {
+function ExpandableContainer({ header, imageSrc, altText, children }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   function handleExpand() {
@@ -13,14 +13,11 @@ function ExpandableContainer({ header, imageSrc, altText, children, bgColor }) {
   return (
     <>
         <Container 
-          fluid="lg"
-          style={{backgroundColor: bgColor}}
-          className="py-3 justify-content-center"
+          fluid
         >
-          
           <Row className="justify-content-center">
-            <Col xs={12} lg={8}>
-            <h5 className="website-header text-white px-0 pb-3 m-0">{header}</h5>
+            <Col xs={12} lg={6}>
+            <h5 className="text-white px-0 py-3 m-0">{header}</h5>
               <Image 
               src={imageSrc}
               alt={altText}
@@ -29,10 +26,10 @@ function ExpandableContainer({ header, imageSrc, altText, children, bgColor }) {
             />
             </Col>
           </Row>
-            
+          { !isExpanded && <ExpandableSemiCircle onSelect={handleExpand} isExpanded={isExpanded}/> }
         </Container>
         { isExpanded && children }
-        <ExpandableSemiCircle onSelect={handleExpand} isExpanded={isExpanded}/>
+        { isExpanded && <ExpandableSemiCircle onSelect={handleExpand} isExpanded={isExpanded}/>}
     </>
 
   );
