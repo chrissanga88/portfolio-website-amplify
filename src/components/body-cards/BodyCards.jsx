@@ -9,8 +9,8 @@ function BodyCards({customColor, textColor, title, content}) {
       }}
       className='h-100 w-100'>
       <Card.Body>
-        <Card.Title className='text-center p-2'>{title}</Card.Title>
-        <Card.Text className='text-center'>
+        <Card.Title className='card-title text-center p-2'>{title}</Card.Title>
+        <Card.Text className='card-text text-center'>
           {content}
         </Card.Text>
       </Card.Body>

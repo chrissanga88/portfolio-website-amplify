@@ -3,8 +3,8 @@ import WebsiteSection from "../components/website/WebsiteSection";
 
 function ProjectsPage() {
   return (
-    <main style={{backgroundColor: "#2E5E4E"}}>
-      <WebsiteSection />
+    <main>
+      <WebsiteSection style={{backgroundColor: "#2E5E4E"}}/>
       <WebsiteSection />
     </main>
   )

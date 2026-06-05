@@ -1,0 +1,19 @@
+.design-text {
+  color: white;
+}
+
+.frontend-logos img {
+  height: 60px;
+}
+
+@media (max-width: 576px) {
+  .design-text {
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .frontend-cards .card-text {
+    font-size: .8rem;
+  }
+}
