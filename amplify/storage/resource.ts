@@ -7,7 +7,6 @@ export const storage = defineStorage({
     'public/*': [
       allow.guest.to(['read']),
       allow.authenticated.to(['read']),
-      allow.groups(['Admin']).to(['read', 'write', 'delete'])
     ]
   })
 });
