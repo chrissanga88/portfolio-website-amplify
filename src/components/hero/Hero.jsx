@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import AnimateLetters from "../animations/animateLetters";
+import AnimateLetters from "../animations/AnimateLetters";
 import BootstrapControlled from "../carousels/BootstrapControlled";
 import BodyCards from "../body-cards/BodyCards";
 import { CarouselItem } from 'react-bootstrap';
