@@ -6,6 +6,7 @@ import RootLayout from './pages/Root';
 import ErrorPage from './pages/Error';
 import ProjectsPage from './pages/Projects';
 import LoginPage from './pages/Login';
+import './app.css';
 
 // an array of route definition objects is passed to the createBrowserRouter function. Each object represents one route.
 const router = createBrowserRouter([
